@@ -37,6 +37,22 @@ cd ../client
 npm install
 ```
 
+3. **Set up environment variables:**
+
+   **For the client:**
+
+   - Navigate to the client directory
+   - Create a new file named `.env`
+   - Open the file and add: `VITE_API_URL=http://localhost:8080`
+   - Alternatively, copy the contents from `.env.example` if it exists
+
+   **For the server:**
+
+   - Navigate to the server directory
+   - Create a new file named `.env`
+   - Copy all the keys from `.env.example`
+   - Fill in the values for each key with your specific configuration
+
 ## Running the Application
 
 ### Server

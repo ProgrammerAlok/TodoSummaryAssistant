@@ -4,7 +4,6 @@ import axiosInstance, { endpoints } from "../apis";
 import { FiLogOut, FiEdit, FiTrash, FiSave } from "react-icons/fi";
 import { ImSpinner2 } from "react-icons/im";
 import { toast } from "react-toastify";
-import { Axios, AxiosResponse } from "axios";
 
 interface Todo {
   id: string;
