@@ -24,7 +24,11 @@ const Signup = () => {
       e.preventDefault();
       setLoading(true);
       try {
-        const data = await signUp(formData);
+        const data = await signUp({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          password: formData.password,
+        });
         // @ts-ignore
         if (data?.success) {
           navigate("/signin");

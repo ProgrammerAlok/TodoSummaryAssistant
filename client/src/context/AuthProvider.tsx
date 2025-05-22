@@ -19,8 +19,7 @@ type AuthContextType = {
   signUp: (credentials: {
     email: string;
     password: string;
-    firstName: string;
-    lastName: string;
+    name: string;
   }) => Promise<unknown>;
 };
 
@@ -79,12 +78,7 @@ export default function AuthProvider({ children }: AuthProviderProps) {
   );
 
   const signUp = useCallback(
-    async (data: {
-      email: string;
-      password: string;
-      firstName: string;
-      lastName: string;
-    }) => {
+    async (data: { email: string; password: string; name: string }) => {
       try {
         const response = await axiosInstance.post(endpoints.auth.signup, data);
         if (response.data.success) {
